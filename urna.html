@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="script.js" defer></script>
+    <script type="module" src="candidato.js" defer></script>
+    <script type="module" src="urnaController.js" defer></script>
+    <!-- <span class="material-icons">search</span> -->
+    <title>Urna Rick and Morty</title>
+    <link rel="icon" href="images/icons/urn.jpg">
+    <meta name="description" content="">
+</head>
+
+<body>
+    <!-- Essa div abrange todo o corpo da URNA -->
+    <main id="urna">
+        <section id="higher">
+            <!-- EM QUEM VOTAR? MENU DE CANDIDATOS -->
+            <nav>
+                <h4>Não sabe em quem votar? Clique aqui</h4>
+                <button><span id="em-quem-votar" class="material-icons" onclick="em_quem_votar()">group</span></button>
+            </nav>
+            <article id="menu-candidatos" style="display: none;">
+                <h1>Em quem votar?</h1>
+                <div class="menu-candidatos-candidato menu-candidatos-rick">
+                    <div class="menu-candidatos-img-nome">
+                        <img src="./images/rick-bebendo.png" alt="">
+                        <p>Presidente: Rick</p>
+                        <p>Vice-presidente: Pickle Rick</p>
+                        <p>Número: 01</p>
+                    </div>
+                    <div class="menu-candidatos-descricao">Rick é um alcolatra, sem muitos sentimentos afetivos, mas
+                        também é chamado como "o homem mais inteligente do universo". Sua mente e seus conhecimentos são
+                        almejados por muitos, alguns pagam, e outros recebem para matar <b>Rick Sanchez</b></div>
+                </div>
+                <div class="menu-candidatos-morty">
+                    <div class="menu-candidatos-img-nome">
+                        <img src="https://pngimg.com/uploads/rick_morty/rick_morty_PNG32.png" alt="">
+                        <p>Presidente: Morty</p>
+                        <p>Vice-presidente: Jessica</p>
+                        <p>Número: 42</p>
+                    </div>
+                    <div class="menu-candidatos-descricao"></div>
+                </div>
+                <div class="menu-candidatos-jerry">
+                    <div class="menu-candidatos-img-nome">
+                        <img src="https://pngimg.com/uploads/rick_morty/rick_morty_PNG23.png" alt="">
+                        <p>Presidente: Jerry</p>
+                        <p>Vice-presidente: Doofus Rick</p>
+                        <p>Número: 09</p>
+                    </div>
+                    <div class="menu-candidatos-descricao"></div>
+                </div>
+                <div class="menu-candidatos-evil-morty">
+                    <div class="menu-candidatos-img-nome">
+                        <img src="https://vignette.wikia.nocookie.net/rick-y-morty-espanol/images/6/6b/Evilmorty2.png/revision/latest?cb=20170423084829&path-prefix=es"
+                            alt="">
+                        <p>Presidente:Evil Morty</p>
+                        <p>Vice-presidente: ***</p>
+                        <p>Número: 66</p>
+                    </div>
+                    <div class="menu-candidatos-descricao"></div>
+                </div>
+                <div class="menu-candidatos-conselho-rick">
+                    <div class="menu-candidatos-img-nome">
+                        <img src="https://www.thewrap.com/wp-content/uploads/2017/08/council-of-ricks.jpg" alt="">
+                        <p>Presidente: Conselho de Ricks da Cidadela</p>
+                        <p>Vice-presidente: Morty da Cidadela</p>
+                        <p>Número: 99</p>
+                    </div>
+                    <div class="menu-candidatos-descricao"></div>
+                </div>
+            </article>
+            <section id="antes-voto">
+                <header class="header-tela">
+                    <h1>Urna <a href="" target="_blank" rel="noopener noreferrer">Rick and Morty</a></h1>
+                </header>
+                <h2 class="class-teste">Presidente</h2>
+                <section class="inputs-numero">
+                    <div class="numero-presidente numero-presidente-primeiro-numero"></div>
+                    <div class="numero-presidente numero-presidente-segundo-numero"></div>
+                </section>
+                <aside style="display: none">
+                    <img src="https://pngimg.com/uploads/rick_morty/rick_morty_PNG32.png" alt=""
+                        title="Mory mordendo os lábios">
+                    <img src="https://static.wikia.nocookie.net/b1d3dc1e-5ae9-4e36-a267-6cf3864037bf" alt=""
+                        title="morty e rick se encarando">
+                    <img src="https://pluspng.com/img-png/rick-and-morty-png-rick-and-morty-png-by-lalingla-950.png"
+                        alt="" title="morty and rick no portal">
+                    <img src="https://imagensemoldes.com.br/wp-content/uploads/2021/04/Desenho-Rick-and-Morty-PNG.png"
+                        alt="" title="Rick feliz dançando">
+                    <img src="https://pngimg.com/uploads/rick_morty/rick_morty_PNG23.png" alt=""
+                        title="Jerry com camisa com o rosto de Jerry">
+                </aside>
+            </section>
+            <section id="tela-candidato" style="display: none;">
+                <!-- TELA DO PRESIDENTE RICK -->
+                <section ID="presidente-rick" style="display: none;">
+                    <div class="coluna-texto">
+                        <div class="titulo">
+                            <h2>Presidente:</h2>
+                            <div class="descricao-presidente">
+                                <h4>Número:</h4>
+                                <h5>01</h5>
+                                <h4>Nome:</h4>
+                                <h5>Rick Sanchez C-137</h5>
+                                <h4>Vice-presidente:</h4>
+                                <h5>Pickle Rick</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coluna-imagem">
+                        <img class="img-presidente-rick" src="./images/rick-bebendo.png" alt="">
+                        <img class="img-vice-presidente-rick"
+                            src="https://i.pinimg.com/originals/4b/79/79/4b79793d2fc4b9a87cb307681bb2f186.png" alt=""
+                            title="Pickle Rick">
+                    </div>
+                </section>
+                <!-- TELA DO PRESIDENTE MORTY -->
+                <section id="presidente-morty" style="display: none;">
+                    <div class="coluna-texto">
+                        <div class="titulo">
+                            <h2>Presidente:</h2>
+                            <div class="descricao-presidente">
+                                <h4>Número:</h4>
+                                <h5>42
+                                </h5>
+                                <h4>Nome:</h4>
+                                <h5>Morty Smith C-137</h5>
+                                <h4>Vice-presidente:</h4>
+                                <h5>Jessica</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coluna-imagem">
+                        <img class="img-presidente" src="https://pngimg.com/uploads/rick_morty/rick_morty_PNG32.png"
+                            alt="" title="">
+                        <img class="img-vice-presidente"
+                            src="https://i.pinimg.com/originals/46/33/c7/4633c73be0d8b4a4321ecf1aaba27336.png" alt=""
+                            title="">
+                    </div>
+                </section>
+                <!-- TELA DO PRESIDENTE JERRY -->
+                <section id="presidente-jerry" style="display: none;">
+                    <div class="coluna-texto">
+                        <div class="titulo">
+                            <h2>Presidente:</h2>
+                            <div class="descricao-presidente">
+                                <h4>Número:</h4>
+                                <h5>09</h5>
+                                <h4>Nome:</h4>
+                                <h5>Jerry Smith</h5>
+                                <h4>Vice-presidente:</h4>
+                                <h5>Doofus Rick</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coluna-imagem">
+                        <img class="img-presidente" src="https://pngimg.com/uploads/rick_morty/rick_morty_PNG23.png"
+                            alt="">
+                        <img class="img-vice-presidente"
+                            src="https://pocketmortys.net/images/assets/CharacterRickDoofusFront.png" alt=""
+                            title="Doofus Rick">
+                    </div>
+                </section>
+                <!-- TELA DO PRESIDENTE EVIL MORTY -->
+                <section id="presidente-evil-morty" style="display: none;">
+                    <div class="coluna-texto">
+                        <div class="titulo">
+                            <h2>Presidente:</h2>
+                            <div class="descricao-presidente">
+                                <h4>Número:</h4>
+                                <h5>66</h5>
+                                <h4>Nome:</h4>
+                                <h5>Evil Morty</h5>
+                                <h4>Vice-presidente:</h4>
+                                <h5>****</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coluna-imagem">
+                        <img class="img-presidente"
+                            src="https://vignette.wikia.nocookie.net/rick-y-morty-espanol/images/6/6b/Evilmorty2.png/revision/latest?cb=20170423084829&path-prefix=es"
+                            alt="">
+                        <img class="img-vice-presidente"
+                            src="https://cdn3.iconfinder.com/data/icons/gray-toolbar-4/512/query-512.png" alt=""
+                            title="Presidente independente">
+                    </div>
+                </section>
+                <!-- TELA DO PRESIDENTE CONSELHO RICK -->
+                <section id="presidente-conselho-rick" style="display: none;">
+                    <div class="coluna-texto">
+                        <div class="titulo">
+                            <h2>Presidente:</h2>
+                            <div class="descricao-presidente">
+                                <h4>Número:</h4>
+                                <h5>99</h5>
+                                <h4>Nome:</h4>
+                                <h5>Conselho de Ricks</h5>
+                                <h4>Vice-presidente:</h4>
+                                <h5>Presidente Morty</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coluna-imagem">
+                        <img class="img-presidente"
+                            src="https://www.thewrap.com/wp-content/uploads/2017/08/council-of-ricks.jpg" alt="">
+                        <img class="img-vice-presidente" src="images/presidente morty cidadela.png" alt=""
+                            title="Conselho de ricks">
+                    </div>
+                </section>
+            </section>
+            <!-- TELA DO VOTO EM BRANCO -->
+            <section id="voto-branco" style="display: none">
+                <div class="tela">
+                    <article class="texto-fim">
+                        <h1>FIM</h1>
+                    </article>
+                    <aside>
+                        <img src="https://i.pinimg.com/736x/fa/fe/72/fafe72880be763786cd01101efa1f599.jpg"
+                            alt="Agradecimento" title="Agradecido">
+                        <h4>Você votou em BRANCO!</h4>
+                    </aside>
+                </div>
+            </section>
+            <section id="nao-encontrado" style="display: none;">
+                <h1>Candidato não encontrado</h1>
+                <h2>Você irá voltar para o tela de início...</h2>
+            </section>
+            <section id="voto-confirmado" style="display: none;">
+                <h2>VOTO CONFIMADO</h2>
+            </section>
+        </section>
+        <section id="lower">
+            <section id="info">
+                <div class="redes">
+                    <!-- colocar aqui link para projeto no github, portifolio e afins -->
+                    <!-- GITHUB -->
+                    <a href="https://github.com/joaombdev" target="_blank" rel="noopener noreferrer">
+                        <span class="material-icons">terminal</span></a>
+                    <!-- FIGMA -->
+                    <a href="https://www.figma.com/file/o5IoOngDyO1LZuvVMjjVio/urna-eletronica?node-id=0%3A1&t=iWUOGrPfQeTVAaZM-1"
+                        target="_blank" rel="noopener noreferrer"><span class="material-icons">image</span></a>
+                    <!-- LINK PARA COMPARTILHAR -->
+                    <a href="" target="_blank" rel="noopener noreferrer"><span class="material-icons">share</span></a>
+                    <!-- NÃO SEI AINDA -->
+                    <a href="" target="_blank" rel="noopener noreferrer"><span class="material-icons">refresh</span></a>
+                </div>
+                <div class="logo">
+                    <h1>Código feito por:</h1>
+                    <img src="https://i.ibb.co/PDgZ83G/logo-jo-o-dev-2.png" alt="logo do desenvolvedor"
+                        title="Feito por ">
+                </div>
+            </section>
+            <section id="botoes">
+                <div id="teclado">
+                    <button class="btn click botao-numerico">
+                        <p class="numero-votar">1</p>
+                    </button>
+                    <button class="btn click botao-numerico">
+                        <p class="numero-votar">2</p>
+                    </button>
+                    <button class="btn click botao-numerico">
+                        <p class="numero-votar">3</p>
+                    </button>
+                    <button class="btn click botao-numerico">
+                        <p class="numero-votar">4</p>
+                    </button>
+                    <button class="btn click botao-numerico">
+                        <p class="numero-votar">5</p>
+                    </button>
+                    <button class="btn click botao-numerico">
+                        <p class="numero-votar">6</p>
+                    </button>
+                    <button class="btn click botao-numerico">
+                        <p class="numero-votar">7</p>
+                    </button>
+                    <button class="btn click botao-numerico">
+                        <p class="numero-votar">8</p>
+                    </button>
+                    <button class="btn click botao-numerico">
+                        <p class="numero-votar">9</p>
+                    </button>
+                    <button id="no-num" class="botao-numerico"></button>
+                    <button class="btn click botao-numerico">
+                        <p class="numero-votar">0</p>
+                    </button>
+                </div>
+                <div id="enviar">
+                    <button id="" class="botoes-enviar enviar-branco">
+                        <p class="enviar">BRANCO</p>
+                    </button>
+                    <button id="" class="botoes-enviar enviar-corrigir">
+                        <p class="enviar">CORRIGIR</p>
+                    </button>
+                    <button id="" class="botoes-enviar enviar-confirmar">
+                        <p class="enviar">CONFIRMAR</p>
+                    </button>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
