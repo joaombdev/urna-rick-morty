@@ -1,4 +1,4 @@
-# urna-rick-morty
+# Urna Rick and Morty
 Urna tematica rick and morty
 
 # Sobre a urna
