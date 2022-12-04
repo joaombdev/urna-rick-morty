@@ -20,6 +20,7 @@
     --color-enviar-branco-active: #b6b6b6;
     --color-enviar-corrigir-active: #912525;
     --color-enviar-confirmar-active: #3f9b27;
+    --hover-candidatos: rgb(221, 209, 209);
 }
 
 /* link normal que não foi visitado */
@@ -43,7 +44,7 @@ a:active {
 }
 
 /* STYLE DE INDEX.HTML */
-#pag-cadastro{
+#pag-cadastro {
     background-color: #232323;
     color: #FFF;
     min-width: 100vw;
@@ -92,9 +93,12 @@ a:active {
 
 /* STYLE DE URNA.HTML */
 
+#body-urna {
+    background-color: var(--cor-urna);
+}
+
 #urna {
     background-color: var(--cor-urna);
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,11 +110,12 @@ a:active {
     cursor: pointer;
 }
 
-.open{
+.open {
     display: block;
 }
 
 #menu-candidatos {
+    display: none;
     width: 50rem;
     position: fixed;
     top: 1rem;
@@ -119,21 +124,49 @@ a:active {
     color: var(--color-white);
 }
 
-.menu-candidatos-img-nome{
-    display: flex;
+.menu-candidatos-titulo {
+    text-align: center;
+    margin: 1rem 0;
 }
 
-.menu-candidatos-img-nome img{
+#menu-candidatos.ativo {
+    display: block;
+}
+
+.menu-candidatos-img-nome {
+    display: flex;
+    gap: 4rem;
+}
+
+.menu-candidatos-img-nome img {
     width: 8rem;
 }
 
-.menu-candidatos-candidato{
+.menu-candidatos-descricao {
+    text-align: justify;
 }
 
-.menu-candidatos-rick img{
+.menu-candidatos-candidato {
+    margin: 1rem 3rem;
+}
+
+.menu-candidatos-rick img {
     width: 8em;
 }
 
+.menu-candidatos-rick:hover,
+.menu-candidatos-morty:hover,
+.menu-candidatos-jerry:hover,
+.menu-candidatos-evil-morty:hover,
+.menu-candidatos-conselho-rick:hover {
+    color: #000;
+    padding: .4rem 0;
+    background-color: var(--color-enviar-branco-active);
+    border: solid .2rem #0a0a0a;
+    border-radius: .5rem;
+}
+
+/* STYLE DA URNA EM SI */
 #higher {
     min-width: 90%;
     height: 500px;
@@ -142,6 +175,13 @@ a:active {
     justify-content: center;
     align-items: center;
     border: solid 2px #000;
+}
+
+#higher nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .9rem;
 }
 
 #antes-voto {
@@ -271,7 +311,7 @@ a:active {
     justify-content: space-between;
 }
 
-#presidente-conselho-rick img{
+#presidente-conselho-rick img {
     padding: 0 0 2rem 0;
 }
 
