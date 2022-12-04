@@ -2,14 +2,14 @@ import Candidato from "./candidato.js";
 
 class urnaController {
     constructor() {
-        // em quem votar
-        this.menu_candidatos = document.getElementById('em-quem-votar')
         // identificar ações (números e enviar) no teclado da urna
         this.teclado_numerico = document.querySelectorAll('.botao-numerico');
         this.teclado_de_actions = document.querySelectorAll('.botoes-enviar');
+
         // identificar os visores (telas)
         this.visorEL = document.getElementById('antes-voto');
         this.visorEL_voto_branco = document.getElementById('voto-branco');
+
         // visores dos candidatos
         this.tela_candidato = document.getElementById('tela-candidato')
         this.tela_presidente_rick = document.getElementById('presidente-rick')
@@ -29,15 +29,10 @@ class urnaController {
         this.observador_teclado_actions()
     }
 
-    em_quem_votar(){
-        if (menu_candiatos.style.display = 'none'){
-            menu_candiatos.style.display = 'block'
-        }
-    }
-
     limpar_voto() {
         this.primeiro_numero.innerText = '';
         this.segundo_numero.innerText = '';
+        console.log('Seu voto foi limpado.')
     }
 
     iniciar_processo(parametro) {
@@ -115,38 +110,65 @@ class urnaController {
             this.visorEL.style.display = 'none';
             this.nao_encontrado.style.display = 'none'
             this.tela_candidato.style.display = 'block'
-            this.tela_presidente_rick.style.display = 'flex';
-            console.log('Abrir tela de presidente do Rick C-137');
+            this.tela_presidente_rick.style.display = 'flex'
+            this.tela_presidente_morty.style.display = 'none'
+            this.tela_presidente_jerry.style.display = 'none'
+            this.tela_presidente_evil_morty.style.display = 'none'
+            this.tela_presidente_conselho.style.display = 'none'
+            console.log('Abrir tela de presidente do Rick C-137')
+            this.limpar_voto()
         } else if (voto_completo === '42') {
             this.visorEL.style.display = 'none';
             this.nao_encontrado.style.display = 'none'
             this.tela_candidato.style.display = 'block';
             this.tela_presidente_rick.style.display = 'none'
+            this.tela_presidente_morty.style.display = 'flex'
             this.tela_presidente_jerry.style.display = 'none'
             this.tela_presidente_evil_morty.style.display = 'none'
             this.tela_presidente_conselho.style.display = 'none'
-            this.tela_presidente_morty.style.display = 'flex';
-            console.log('Abrir tela de presidente do Morty');
+            console.log('Abrir tela de presidente do Morty')
+            this.limpar_voto()
         } else if (voto_completo === '09') {
             this.visorEL.style.display = 'none'
             this.nao_encontrado.style.display = 'none'
             this.tela_candidato.style.display = 'block'
+            this.tela_presidente_rick.style.display = 'none'
+            this.tela_presidente_morty.style.display = 'none'
             this.tela_presidente_jerry.style.display = 'flex'
+            this.tela_presidente_evil_morty.style.display = 'none'
+            this.tela_presidente_conselho.style.display = 'none'
             console.log('Abrir tela de presidente do Jerry')
+            this.limpar_voto()
         } else if (voto_completo === '66') {
             this.visorEL.style.display = 'none'
             this.nao_encontrado.style.display = 'none'
             this.tela_candidato.style.display = 'block'
+            this.tela_presidente_rick.style.display = 'none'
+            this.tela_presidente_morty.style.display = 'none'
+            this.tela_presidente_jerry.style.display = 'none'
             this.tela_presidente_evil_morty.style.display = 'flex'
+            this.tela_presidente_conselho.style.display = 'none'
             console.log('Abrir tela de presidente do Evil Morty')
+            this.limpar_voto()
         } else if (voto_completo === '99') {
             this.visorEL.style.display = 'none'
             this.nao_encontrado.style.display = 'none'
             this.tela_candidato.style.display = 'block'
+            this.tela_presidente_rick.style.display = 'none'
+            this.tela_presidente_morty.style.display = 'none'
+            this.tela_presidente_jerry.style.display = 'none'
+            this.tela_presidente_evil_morty.style.display = 'none'
             this.tela_presidente_conselho.style.display = 'flex'
             console.log('Abrir tela de presidente do Conselho Rick')
+            this.limpar_voto()
         } else {
             this.visorEL.style.display = 'none'
+            this.tela_candidato.style.display = 'none'
+            this.tela_presidente_rick.style.display = 'none'
+            this.tela_presidente_morty.style.display = 'none'
+            this.tela_presidente_jerry.style.display = 'none'
+            this.tela_presidente_evil_morty.style.display = 'none'
+            this.tela_presidente_conselho.style.display = 'none'
             this.nao_encontrado.style.display = 'flex';
 
             setTimeout(() => {
