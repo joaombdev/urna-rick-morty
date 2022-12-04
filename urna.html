@@ -13,22 +13,23 @@
     <script type="module" src="candidato.js" defer></script>
     <script type="module" src="urnaController.js" defer></script>
     <!-- <span class="material-icons">search</span> -->
-    <title>Urna Rick and Morty</title>
+    <title id="nome-pagina">Urna Rick and Morty</title>
     <link rel="icon" href="images/icons/urn.jpg">
     <meta name="description" content="">
 </head>
 
-<body>
+<body id="body-urna">
     <!-- Essa div abrange todo o corpo da URNA -->
     <main id="urna">
         <section id="higher">
             <!-- EM QUEM VOTAR? MENU DE CANDIDATOS -->
             <nav>
                 <h4>Não sabe em quem votar? Clique aqui</h4>
-                <button><span id="em-quem-votar" class="material-icons" onclick="em_quem_votar()">group</span></button>
+                <span id="em-quem-votar" class="material-icons">group</span>
             </nav>
-            <article id="menu-candidatos" style="display: none;">
-                <h1>Em quem votar?</h1>
+            <!-- MENU COM OS CANDIDATOS E OS NÚMEROS -->
+            <article id="menu-candidatos">
+                <h1 class="menu-candidatos-titulo">Em quem votar?</h1>
                 <div class="menu-candidatos-candidato menu-candidatos-rick">
                     <div class="menu-candidatos-img-nome">
                         <img src="./images/rick-bebendo.png" alt="">
@@ -40,25 +41,25 @@
                         também é chamado como "o homem mais inteligente do universo". Sua mente e seus conhecimentos são
                         almejados por muitos, alguns pagam, e outros recebem para matar <b>Rick Sanchez</b></div>
                 </div>
-                <div class="menu-candidatos-morty">
+                <div class="menu-candidatos-candidato menu-candidatos-morty">
                     <div class="menu-candidatos-img-nome">
                         <img src="https://pngimg.com/uploads/rick_morty/rick_morty_PNG32.png" alt="">
                         <p>Presidente: Morty</p>
                         <p>Vice-presidente: Jessica</p>
                         <p>Número: 42</p>
                     </div>
-                    <div class="menu-candidatos-descricao"></div>
+                    <div class="menu-candidatos-descricao">Morty é um garoto, estudante de 14 anos, que é geralmente arrastado pelo seu vó, Rick, para aventuras por toda galáxia e outros muliversos. É um menino bom, que pensa nos outros e tenta resolver seus problemas da melhor forma, principalmente o seu amor platonico por sua colega da aula de matemática, Jessica.</div>
                 </div>
-                <div class="menu-candidatos-jerry">
+                <div class="menu-candidatos-candidato menu-candidatos-jerry">
                     <div class="menu-candidatos-img-nome">
                         <img src="https://pngimg.com/uploads/rick_morty/rick_morty_PNG23.png" alt="">
                         <p>Presidente: Jerry</p>
                         <p>Vice-presidente: Doofus Rick</p>
                         <p>Número: 09</p>
                     </div>
-                    <div class="menu-candidatos-descricao"></div>
+                    <div class="menu-candidatos-descricao">Jerry é o pai de Morty, marido de Beth e genro de Rick. Ele leva o incômodo de ser um perdedor, após tem tentado diversas carreiras e não ter nenhum sucesso, também se estressa facilmente, principalmente se o assunto for Rick Sanchez. Mas em alguns momentos ele tem atitudes heroicas, gloriosas e corajosas.</div>
                 </div>
-                <div class="menu-candidatos-evil-morty">
+                <div class="menu-candidatos-candidato menu-candidatos-evil-morty">
                     <div class="menu-candidatos-img-nome">
                         <img src="https://vignette.wikia.nocookie.net/rick-y-morty-espanol/images/6/6b/Evilmorty2.png/revision/latest?cb=20170423084829&path-prefix=es"
                             alt="">
@@ -66,9 +67,9 @@
                         <p>Vice-presidente: ***</p>
                         <p>Número: 66</p>
                     </div>
-                    <div class="menu-candidatos-descricao"></div>
+                    <div class="menu-candidatos-descricao">Evil Morty é um cara solitário, esperto e curioso</div>
                 </div>
-                <div class="menu-candidatos-conselho-rick">
+                <div class="menu-candidatos-candidato menu-candidatos-conselho-rick">
                     <div class="menu-candidatos-img-nome">
                         <img src="https://www.thewrap.com/wp-content/uploads/2017/08/council-of-ricks.jpg" alt="">
                         <p>Presidente: Conselho de Ricks da Cidadela</p>
@@ -243,7 +244,7 @@
                 <div class="redes">
                     <!-- colocar aqui link para projeto no github, portifolio e afins -->
                     <!-- GITHUB -->
-                    <a href="https://github.com/joaombdev/urna-rick-morty" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/joaombdev" target="_blank" rel="noopener noreferrer">
                         <span class="material-icons">terminal</span></a>
                     <!-- FIGMA -->
                     <a href="https://www.figma.com/file/o5IoOngDyO1LZuvVMjjVio/urna-eletronica?node-id=0%3A1&t=iWUOGrPfQeTVAaZM-1"
